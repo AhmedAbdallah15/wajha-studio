@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f3f0e9">
+<script>
+try {
+  if (localStorage.getItem('wajha-theme') === 'dark') {
+    document.documentElement.dataset.theme = 'dark';
+    document.querySelector('meta[name="theme-color"]').content = '#111016';
+  }
+} catch {}
+</script>
+<meta name="description" content="واجهة، استوديو للهوية المهنية. تصميم السير الذاتية والبورتفوليو والمواقع الشخصية وبروفايلات الشركات.">
+<title>واجهة | WAJHA — Professional Identity Studio</title>
+<link rel="icon" type="image/png" href="wajha-icon.png?v=2">
+<style>
+:root{color-scheme:light;--bg:#f3f0e9;--paper:#fbf8f2;--ink:#161318;--muted:#58515c;--line:#c9c3c7;--brand:#3c02fd;--accent:#3506df;--spot:#e8dfff;--solid:#fff;--ink-white:#fff}
+[data-theme="dark"]{color-scheme:dark;--bg:#111016;--paper:#1b1722;--ink:#f9f4ee;--muted:#c1b8c9;--line:#43384e;--accent:#c0a9ff;--spot:#2d214c;--solid:#251e30}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Segoe UI",Tahoma,Arial,sans-serif}h1,h2,h3,p,figure{margin:0}h1,h2,h3{line-height:1.18}a{color:inherit;text-decoration:none}button,select,textarea,input{font:inherit}button{cursor:pointer}button,a,input,select,textarea{touch-action:manipulation}:focus-visible{outline:2px solid var(--accent);outline-offset:4px}img{display:block;width:100%;height:auto}fieldset{min-width:0}.wrap{width:min(1190px,calc(100% - 80px));margin-inline:auto}.mono{font:700 .72rem/1.35 Consolas,monospace;letter-spacing:.12em}.skip{position:absolute;top:-100px;inset-inline-start:12px;z-index:9;background:var(--ink);color:var(--bg);padding:7px 16px}.skip:focus{top:8px}.top{border-bottom:1px solid var(--line)}.top .wrap{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:15px}.brand{display:inline-flex;align-items:center;gap:8px;font-weight:780;white-space:nowrap;font-size:1.16rem}.brand bdi{font:800 .87rem/1 Consolas,monospace;letter-spacing:.08em}.brand-icon{width:34px;height:34px;object-fit:contain;border-radius:7px}.divider{color:var(--muted);opacity:.65}.top nav,.top-actions{display:flex;align-items:center;gap:18px}.top nav{color:var(--muted);font-size:.9rem}.top nav a:hover{color:var(--accent)}.top-actions{gap:8px}
+.button,.outline,.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:6px;padding:9px 16px;font-weight:720;white-space:nowrap;min-height:42px;transition:background .2s,color .2s,border-color .2s}.button{background:var(--brand);color:#fff}.button:hover{background:#2704ac}.button:disabled{opacity:.56;cursor:default}.outline,.theme-toggle{background:transparent;border-color:var(--line);color:var(--ink)}.outline:hover,.theme-toggle:hover{border-color:var(--accent);color:var(--accent)}.theme-toggle{padding-inline:10px;font-size:.84rem}.theme-moon,[data-theme="light"] .theme-sun{display:none}[data-theme="light"] .theme-moon{display:block}
+.hero{padding-block:48px 52px}.hero-layout{display:grid;grid-template-columns:.96fr 1.04fr;align-items:center;gap:58px}.eyebrow{display:flex;align-items:center;flex-wrap:wrap;gap:8px;color:var(--accent);font-size:.85rem;font-weight:760}.eyebrow bdi{color:var(--muted);font:700 .62rem/1.3 Consolas,monospace;letter-spacing:.1em;margin-inline-start:4px}.dot{width:8px;height:8px;background:var(--brand);border-radius:50%}.hero h1{font-size:clamp(3.25rem,7.1vw,7.3rem);line-height:1.07;letter-spacing:-.055em;margin:15px 0 17px;font-weight:850}.hero h1 em{font-style:normal;color:var(--accent)}.hero .lead{color:var(--muted);font-size:clamp(1rem,2vw,1.18rem);max-width:34ch}.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}.motion-toggle[hidden]{display:none}.motion-toggle{background:none;border:0;color:var(--muted);display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:4px 0;margin-top:7px;font-size:.78rem}.motion-toggle:hover{color:var(--accent)}.motion-glyph{font:700 .8rem/1 Consolas,monospace}
+.studio-board{position:relative;min-width:0;aspect-ratio:1.18;overflow:hidden;border-radius:13px;background:radial-gradient(ellipse at 19% 5%,#8752ff,transparent 55%),linear-gradient(138deg,#4a14f2,#3505c7 60%,#220a62);color:#fff;isolation:isolate;box-shadow:0 16px 34px #38118d34}.board-cap,.studio-board figcaption{position:absolute;inset-inline:15px;display:flex;justify-content:space-between;gap:6px;z-index:2;font:700 .62rem/1.4 Consolas,monospace;letter-spacing:.11em}.board-cap{top:13px;direction:ltr}.studio-board figcaption{bottom:12px;color:#f3eaff}.board-grid{position:absolute;inset:0;z-index:-1;opacity:.46;background:linear-gradient(#ffffff29 1px,transparent 1px),linear-gradient(90deg,#ffffff29 1px,transparent 1px);background-size:32px 32px;mask-image:radial-gradient(ellipse at center,#000 0%,transparent 84%)}.work-samples{position:absolute;inset:0}.specimen{position:absolute;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;box-shadow:0 16px 32px #1b06475e;line-height:1.03;padding:3.2%;font-family:"Segoe UI",Arial,sans-serif;text-align:left}.specimen-label,.specimen-foot{font:750 clamp(.29rem,.63vw,.62rem)/1.15 Consolas,monospace;letter-spacing:.045em}.specimen-foot{margin-top:auto}.specimen strong{font-size:clamp(.9rem,2.7vw,2.95rem);letter-spacing:-.06em;margin-top:11%;z-index:1}.specimen-cv{width:36%;height:67%;top:18%;left:8%;background:#faf5ed;color:#1a1424;border-radius:4px;transform:rotate(-10deg)}.specimen-rule{width:100%;height:2px;background:#3c02fd;margin:9% 0}.specimen-lines{display:grid;gap:5px;width:100%}.specimen-lines i{height:3px;width:86%;background:#b8acbf}.specimen-lines i:nth-child(2){width:62%}.specimen-lines i:nth-child(3){width:73%}.specimen-pdf{width:40%;height:69%;top:17%;left:29%;background:#170d29;color:#fcf8f4;border-radius:4px;transform:rotate(7deg);border:1px solid #ffffff3d}.specimen-pdf strong span{color:#a88aff}.specimen-orbit{position:absolute;width:102%;aspect-ratio:1;top:44%;left:35%;border-radius:50%;border:1px solid #b49aff;box-shadow:0 0 0 11px #8858f64f,0 0 0 23px #8858f640,0 0 0 36px #8858f622}.specimen-web{width:39%;height:59%;top:28%;left:55%;background:#e4d8ff;color:#21123d;border-radius:7px;transform:rotate(-7deg);border:1px solid #fff9}.specimen-web .specimen-label{display:flex;width:100%;justify-content:space-between;padding-bottom:7%;border-bottom:1px solid #422b6666}.specimen-web .specimen-label i{font-style:normal;color:#3c02fd}.specimen-web-grid{display:flex;width:100%;gap:5px;margin-top:10%}.specimen-web-grid i{height:20px;flex:1;background:#9f7be9;border-radius:2px}.specimen-web-grid i+ i{background:#4d23c4}
+.section{padding-block:62px;scroll-margin-top:14px;border-top:1px solid var(--line)}.section h2{font-size:clamp(2.05rem,4.5vw,4.15rem);font-weight:820;letter-spacing:-.035em}.kicker{color:var(--accent);margin-bottom:9px}.intro{color:var(--muted)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:22px}.section-head .intro{max-width:29ch}.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.service{display:grid;grid-template-columns:1.65rem minmax(0,1fr) auto;align-items:start;gap:6px;text-align:start;padding:13px 12px;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:8px;min-height:99px;transition:background .2s,border-color .2s,transform .2s}.service:hover,.service[aria-pressed="true"]{border-color:var(--accent);background:var(--spot)}.service:hover{transform:translateY(-2px)}.service small{display:block;color:var(--muted);font-size:.75rem}.num,.arrow,.card-rate{color:var(--accent)}.num,.arrow{padding-top:3px}.card-rate{grid-column:2/-1;font-size:.78rem;font-weight:720}
+.sample{display:grid;grid-template-columns:1.05fr .95fr;gap:25px;margin-top:14px;padding:18px;border:1px solid var(--line);border-radius:11px;background:var(--paper);align-items:center}.sample-info{display:grid;gap:10px}.sample-info>header{display:flex;justify-content:space-between;align-items:center;gap:8px}.sample-info .outline{justify-self:start;font-size:.83rem}.sample p{color:var(--muted);font-size:.93rem}.mark{border:1px solid var(--line);border-radius:30px;padding:2px 7px;color:var(--muted);font-size:.68rem;white-space:nowrap}.sheet{position:relative;isolation:isolate;overflow:hidden;direction:ltr;text-align:left;min-height:215px;padding:20px;color:#21123d;background:#ece2f6;border-radius:7px}.sheet:after{content:"";position:absolute;z-index:-1;inset:auto -12% -73% auto;width:250px;aspect-ratio:1;border:1px solid #5a2cc08a;border-radius:50%;box-shadow:0 0 0 16px #673ad72e,0 0 0 35px #673ad718}.sheet[data-kind="pdf"]{background:#dfd1fb}.sheet:is([data-kind="web"],[data-kind="company"],[data-kind="linkedin"]){background:#2b1255;color:#fff}.sheet[data-kind="card"]{background:#eee4fc}.sheet .mini,.sheet-chrome{font:750 .65rem/1.4 Consolas,monospace;letter-spacing:.09em}.sheet strong{display:block;font-size:clamp(1.45rem,3.6vw,2.9rem);line-height:1.07;margin:11px 0 17px}.sheet .bars,.sheet-dots{display:flex;gap:6px}.sheet .bars span{height:24px;flex:1;background:#8560d5;border-radius:3px}.sheet .bars span:nth-child(2){flex:.55;background:#ae92ef}.sheet .bars span:nth-child(3){flex:.8;background:#5d34b2}.sheet-chrome{display:none}.sheet:is([data-kind="pdf"],[data-kind="web"]) .sheet-chrome{display:flex;justify-content:space-between;border-bottom:1px solid currentColor;padding-bottom:7px;margin-bottom:9px;opacity:.65}.sheet-dots i{width:5px;height:5px;border-radius:50%;background:currentColor}.sample-pricing{border-top:1px solid var(--line);padding-top:8px}.sample-pricing h3{font-size:.81rem;color:var(--muted);margin-bottom:5px}.sample-pricing ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}.sample-pricing li{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:.87rem}.sample-pricing strong{color:var(--accent)}
+.process{background:var(--paper)}.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}.steps article{border-top:2px solid var(--line);padding-top:12px}.steps h3{margin:6px 0}.steps p,.request p{color:var(--muted)}.request{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);align-items:start;gap:42px}.request-intro .intro{max-width:30ch;margin-top:10px}.request form{display:grid;gap:0;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px}.order-step{border:0;margin:0;padding:0 0 18px;display:grid;gap:8px}.order-step+.order-step{padding-top:9px}.order-step:last-child{padding-bottom:0}.order-step legend{display:flex;align-items:center;gap:8px;margin:0 0 9px;padding:0;font-weight:760}.step-number{width:26px;height:26px;border-radius:5px;display:inline-grid;place-items:center;background:var(--brand);color:#fff;font-size:.78rem}.request :is(input:not([type="hidden"]),select,textarea){width:100%;min-width:0;background:var(--solid);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:8px 10px}.request textarea{min-height:86px;resize:vertical}.request .fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}.request .fields label{display:grid;gap:6px;min-width:0}.request .button{justify-self:start}.quote{display:grid;grid-template-columns:1fr 1fr;gap:8px}.quote>div{display:grid;padding:8px 10px;background:var(--solid);border:1px solid var(--line);border-radius:6px}.quote span,.hint,.payment-pending{font-size:.78rem;color:var(--muted)}.quote strong{font-size:1.18rem;white-space:nowrap}.quote .deposit{background:var(--spot);border-color:var(--accent);color:var(--accent)}.payment-pending{border-inline-start:2px solid var(--accent);background:var(--spot);padding:5px 8px}.payment-pending[hidden],#receipt-status:empty{display:none}.payment-qr{border:1px solid var(--line);border-radius:6px;background:var(--solid)}.payment-qr summary{padding:8px 10px;cursor:pointer;font-weight:680}.payment-qr summary span:last-child{float:left;font-size:.72rem;color:var(--muted)}.qr-content{padding:0 10px 10px;display:grid;gap:8px;justify-items:start}.qr-content a{width:min(100%,240px)}.qr-content img{border-radius:5px;background:white}.request input[type="file"]::file-selector-button{border:0;border-radius:5px;background:var(--brand);color:#fff;padding:4px 7px;margin-inline-end:7px;font:inherit;cursor:pointer}.footer{border-top:1px solid var(--line);padding-block:18px;color:var(--muted)}.footer .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(prefers-reduced-motion:no-preference){.specimen{animation:specimen-float 7s ease-in-out infinite alternate}.specimen-cv{--turn:-10deg;--lift:-7px}.specimen-pdf{--turn:7deg;--lift:8px;animation-delay:-2s}.specimen-web{--turn:-7deg;--lift:-11px;animation-delay:-4s}.hero-copy{animation:reveal .65s ease-out both}html[data-motion="playing"] .in-view{animation:reveal .55s ease-out both}html[data-motion="paused"] .specimen{animation-play-state:paused}html[data-motion="paused"] .hero-copy{animation:none}}
+@keyframes specimen-float{from{transform:translateY(4px) rotate(var(--turn))}to{transform:translateY(var(--lift)) rotate(var(--turn))}}
+@keyframes reveal{from{opacity:.45;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){.wrap{width:calc(100% - 48px)}.hero-layout{gap:28px}.request{gap:24px}.top nav{gap:9px}.top-actions{gap:5px}}
+@media(max-width:680px){.wrap{width:calc(100% - 30px)}.top .wrap{min-height:59px}.top nav{display:none}.top .outline{font-size:.79rem;padding-inline:8px}.brand{gap:5px}.brand-icon{width:29px;height:29px}.hero{padding-block:35px 38px}.hero-layout,.sample,.request{grid-template-columns:1fr;gap:18px}.hero h1{font-size:clamp(3.2rem,11vw,5rem);margin-block:13px}.studio-board{width:min(100%,520px);margin-inline:auto}.specimen strong{font-size:clamp(1.1rem,5.5vw,2.4rem)}.specimen-label,.specimen-foot{font-size:clamp(.31rem,1.1vw,.56rem)}.section{padding-block:42px}.section-head{align-items:start;flex-direction:column;gap:7px}.services{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.service{grid-template-columns:1.2rem minmax(0,1fr) auto;padding:9px 7px;gap:4px;min-height:94px}.service b{font-size:.9rem}.service small{font-size:.66rem}.sample{padding:13px}.steps{grid-template-columns:1fr;gap:14px}.request form{padding:13px}}
+@media(max-width:385px){.top .outline,.theme-caption{display:none}.theme-toggle{width:38px;padding:0}.request .fields{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.contact-socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.contact-socials .outline{font-size:.88rem}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">انتقل للمحتوى</a>
+<header class="top"><div class="wrap">
+<a class="brand" href="#" aria-label="واجهة، الرئيسية"><img class="brand-icon" src="wajha-icon.png?v=2" alt="" width="36" height="36">واجهة <span class="divider" aria-hidden="true">|</span> <bdi>WAJHA</bdi></a>
+<nav aria-label="التنقل الرئيسي"><a href="#services">الخدمات</a><a href="#process">طريقة الشغل</a></nav>
+<div class="top-actions">
+<button class="theme-toggle" type="button" id="theme-toggle" aria-pressed="false" aria-label="الوضع الفاتح">
+<svg class="theme-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+<svg class="theme-moon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14a8.7 8.7 0 0 1-10.6-10.5A9 9 0 1 0 20.5 14Z"/></svg>
+<span class="theme-caption" aria-hidden="true">فاتح</span></button>
+<a class="outline" href="#request">جهّز طلبك <span aria-hidden="true">↙</span></a></div>
+</div></header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title"><div class="wrap hero-layout">
+<div class="hero-copy">
+<p class="eyebrow"><span class="dot"></span> استوديو الهوية المهنية <bdi>WAJHA / STUDIO</bdi></p>
+<h1 id="hero-title">شغلك يستاهل<br><em>واجهة.</em></h1>
+<p class="lead">من أول السيرة الذاتية لحد بورتفوليو وموقع وبروفايل شركة. نصمّم لك الطريقة اللي الناس هتشوف بيها شغلك.</p>
+<div class="actions"><a class="button" href="#services">استكشف الخدمات <span aria-hidden="true">↙</span></a><a class="outline" href="#request">ابدأ طلبك</a></div>
+<button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="false" aria-label="إيقاف الحركة" hidden><span class="motion-glyph" aria-hidden="true">Ⅱ</span><span class="motion-label" aria-hidden="true">إيقاف الحركة</span></button>
+</div>
+<figure class="studio-board" aria-label="نماذج توضيحية لتصميم سيرة ذاتية وبورتفوليو وموقع">
+<div class="board-cap" aria-hidden="true"><span>WAJHA</span><span>DESIGN IN PRACTICE</span></div>
+<div class="board-grid" aria-hidden="true"></div>
+<div class="work-samples" dir="ltr" aria-hidden="true">
+<div class="specimen specimen-cv"><span class="specimen-label">01 / CURRICULUM VITAE</span><strong>Your<br>experience.</strong><div class="specimen-rule"></div><div class="specimen-lines"><i></i><i></i><i></i></div><span class="specimen-foot">PROFESSIONAL CV</span></div>
+<div class="specimen specimen-pdf"><span class="specimen-label">02 / PORTFOLIO</span><strong>Selected<br>work<span>.</span></strong><div class="specimen-orbit"></div><span class="specimen-foot">PROJECTS / PDF</span></div>
+<div class="specimen specimen-web"><span class="specimen-label">03 / WEBSITE <i>● ● ●</i></span><strong>Make it<br>yours.</strong><div class="specimen-web-grid"><i></i><i></i></div><span class="specimen-foot">YOUR WORK, ONLINE</span></div>
+</div>
+<figcaption><span>نماذج توضيحية</span><bdi>CV / PDF / WEB</bdi></figcaption>
+</figure></div></section>
+<section class="section showcase" id="services"><div class="wrap"><header class="section-head"><div><p class="mono kicker"><bdi>01 / SERVICE MENU</bdi></p><h2>اختار اللي يناسب شغلك.</h2></div><p class="intro">اختار خدمة وشوف شكل التسليم وأسعار البداية قبل ما تجهّز طلبك.</p></header>
+<div class="explore"><div class="services" aria-label="الخدمات">
+<button class="service" data-service="cv" type="button" aria-pressed="true"><span class="num mono">01</span><span><b>تصميم سيرة ذاتية</b><small><bdi>CV Design</bdi></small></span><span class="arrow" aria-hidden="true">↙</span><span class="card-rate"></span></button>
+<button class="service" data-service="pdf" type="button" aria-pressed="false"><span class="num mono">02</span><span><b>بورتفوليو PDF</b><small><bdi>Portfolio PDF</bdi></small></span><span class="arrow" aria-hidden="true">↙</span><span class="card-rate"></span></button>
+<button class="service" data-service="web" type="button" aria-pressed="false"><span class="num mono">03</span><span><b>موقع بورتفوليو</b><small><bdi>Portfolio Website</bdi></small></span><span class="arrow" aria-hidden="true">↙</span><span class="card-rate"></span></button>
+<button class="service" data-service="company" type="button" aria-pressed="false"><span class="num mono">04</span><span><b>بروفايل شركة</b><small><bdi>Company Profile</bdi></small></span><span class="arrow" aria-hidden="true">↙</span><span class="card-rate"></span></button>
+<button class="service" data-service="linkedin" type="button" aria-pressed="false"><span class="num mono">05</span><span><b>غلاف لينكدإن</b><small><bdi>LinkedIn Cover</bdi></small></span><span class="arrow" aria-hidden="true">↙</span><span class="card-rate"></span></button>
+<button class="service" data-service="card" type="button" aria-pressed="false"><span class="num mono">06</span><span><b>كارت أعمال رقمي</b><small><bdi>Digital Business Card</bdi></small></span><span class="arrow" aria-hidden="true">↙</span><span class="card-rate"></span></button>
+</div><article class="sample" aria-live="polite">
+<div class="sheet" data-kind="cv"><div class="sheet-chrome" aria-hidden="true"><span class="sheet-dots"><i></i><i></i><i></i></span><span>WAJHA / PREVIEW</span></div><span class="mini" id="sample-label">CURRICULUM VITAE</span><strong id="sample-heading">Your Name<br>Professional Title</strong><div class="bars" aria-hidden="true"><span></span><span></span><span></span></div></div>
+<div class="sample-info"><header><bdi class="mono" id="sample-type">CV DESIGN / 01</bdi><span class="mark">مثال توضيحي</span></header>
+<p id="sample-description">سيرة ذاتية مرتّبة تبرز خبرتك ومهاراتك بما يناسب الوظيفة اللي بتقدّم عليها.</p>
+<div class="sample-pricing"><h3>أسعار البداية</h3><ul id="sample-prices"></ul></div>
+<a class="outline" href="#request">اطلب الخدمة <span aria-hidden="true">↙</span></a></div></article></div></div></section>
+<section class="section process" id="process"><div class="wrap"><div><p class="mono kicker"><bdi>02 / Process</bdi></p><h2>من الفكرة لملف جاهز.</h2>
+<div class="steps"><article><span class="num mono">01</span><h3>حدّد الهدف</h3><p>قول مين هيشوف الشغل وإيه اللي محتاج يطلع بيه من أول نظرة.</p></article><article><span class="num mono">02</span><h3>جمّع المحتوى</h3><p>حضّر الخبرات أو المشروعات أو بيانات الشركة اللي عايز تبرزها.</p></article><article><span class="num mono">03</span><h3>راجع التصميم</h3><p>راجع ترتيب المحتوى والتفاصيل قبل تجهيز النسخة النهائية للتسليم.</p></article></div></div></div></section>
+<section class="section" id="request"><div class="wrap request">
+<div class="request-intro"><p class="mono kicker"><bdi>03 / Project request</bdi></p><h2>اطلب خدمتك.</h2><p class="intro">اختار الخدمة، ادفع مقدم 50% عبر InstaPay، وابعت بياناتك وصورة التحويل في طلب واحد.</p><nav class="contact-socials" aria-label="تواصل مع واجهة"><a class="outline" href="https://www.facebook.com/profile.php?id=61596085033232" target="_blank" rel="noopener noreferrer">راسلنا على فيسبوك <span aria-hidden="true">↗</span></a><a class="outline" href="https://www.instagram.com/wajha125/" target="_blank" rel="noopener noreferrer">تابعنا على إنستجرام <span aria-hidden="true">↗</span></a></nav></div>
+<form id="brief" method="post" enctype="multipart/form-data">
+<fieldset class="order-step"><legend><span class="step-number">1</span> اختار الخدمة</legend>
+<label for="service-choice">الخدمة المطلوبة</label>
+<select id="service-choice" name="service" aria-describedby="request-price">
+<optgroup label="تصميم السيرة الذاتية"><option data-key="cv" data-price="300" value="ATS CV">ATS CV</option><option data-key="cv" data-price="400" value="Professional CV">Professional CV</option></optgroup>
+<optgroup label="بورتفوليو PDF"><option data-key="pdf" data-price="1000" value="Portfolio PDF بسيط">Portfolio PDF بسيط</option><option data-key="pdf" data-price="1800" value="Portfolio PDF Premium">Portfolio PDF Premium</option></optgroup>
+<optgroup label="خدمات تانية"><option data-key="web" data-price="2500" value="Portfolio Website بسيط">Portfolio Website بسيط</option><option data-key="company" data-price="1500" value="Company Profile">Company Profile</option><option data-key="linkedin" data-price="200" value="LinkedIn Cover">LinkedIn Cover</option><option data-key="card" data-price="300" value="Digital Business Card">Digital Business Card</option></optgroup>
+</select>
+<div class="quote" id="request-price" role="status">
+<div><span>السعر يبدأ من</span><strong id="request-amount">300 جنيه</strong></div>
+<div class="deposit"><span>مقدم الحجز · 50%</span><strong id="deposit-amount">150 جنيه</strong></div>
+</div></fieldset>
+<fieldset class="order-step"><legend><span class="step-number">2</span> ادفع المقدم عبر InstaPay</legend>
+<p class="hint">المقدم المعروض محسوب على سعر البداية للخدمة اللي اخترتها.</p>
+<p class="payment-pending" id="payment-pending">الدفع قيد التفعيل. من فضلك ما تعملش تحويل قبل ما الإرسال يبقى متاح.</p>
+
+<input type="hidden" name="starting_price_egp" id="starting-price-field" value="300">
+<input type="hidden" name="deposit_egp" id="deposit-field" value="150">
+</fieldset>
+<fieldset class="order-step"><legend><span class="step-number">3</span> أرفق الإيصال وابعت الطلب</legend>
+<label for="receipt">صورة التحويل</label>
+<input id="receipt" name="attachment" type="file" accept="image/jpeg,image/png,image/webp" required aria-describedby="receipt-help receipt-status">
+<p class="hint" id="receipt-help">صورة واحدة بصيغة JPG أو PNG أو WebP، لحد 10 ميجابايت.</p>
+<p class="hint" id="receipt-status" role="status"></p>
+<div class="fields"><label for="client-name">اسمك<input id="client-name" name="name" type="text" autocomplete="name" required maxlength="100" placeholder="الاسم"></label>
+<label for="client-email">البريد الإلكتروني<input id="client-email" name="email" type="email" autocomplete="email" dir="ltr" required maxlength="254" placeholder="name@example.com"></label></div>
+<label for="goal">تفاصيل المشروع</label><textarea id="goal" name="message" maxlength="1600" required placeholder="مثال: محتاج بورتفوليو PDF للتقديم على شغل في التصميم."></textarea>
+<input type="hidden" name="_subject" value="WAJHA | طلب مشروع جديد">
+<input type="hidden" name="_template" value="table">
+<button class="button" type="submit" disabled>إرسال الطلب <span aria-hidden="true">↗</span></button>
+<p class="hint" id="brief-status">إرسال الطلب وصورة التحويل بالبريد قيد التفعيل.</p>
+</fieldset></form></div></section>
+</main>
+<footer class="footer"><div class="wrap"><a class="brand" href="#">واجهة <span class="divider" aria-hidden="true">|</span> <bdi>WAJHA</bdi></a><bdi class="mono">Professional Identity Studio</bdi></div></footer>
+<script>
+const examples = {
+  cv: ['CV DESIGN / 01', 'CURRICULUM VITAE', ['Your Name', 'Professional Title'], 'سيرة ذاتية مرتّبة تبرز خبرتك ومهاراتك بما يناسب الوظيفة اللي بتقدّم عليها.'],
+  pdf: ['PORTFOLIO PDF / 02', 'PORTFOLIO / 01—03', ['Selected Projects'], 'ملف PDF يقدّم نماذج من شغلك في ترتيب واضح، تقدر تبعته مع التقديم أو لعميل محتمل.'],
+  web: ['PORTFOLIO WEBSITE / 03', 'HOME / WORK / ABOUT', ['A Home for Your Work'], 'موقع شخصي تعرض فيه نبذة عنك ومشروعاتك، وتشارك كل ده برابط واحد.'],
+  company: ['COMPANY PROFILE / 04', 'INTRODUCTION / SERVICES', ['Meet the Company'], 'بروفايل يعرّف بشركتك وخدماتها، مناسب للمشاركة مع العملاء والشركاء المحتملين.'],
+  linkedin: ['LINKEDIN COVER / 05', 'PERSONAL BRAND / LINKEDIN', ['Make the First Impression'], 'غلاف لينكدإن يوضح مجالك ويكمّل شكل بروفايلك المهني.'],
+  card: ['DIGITAL BUSINESS CARD / 06', 'NAME / CONTACT', ['Your Details in One Place'], 'كارت رقمي يجمع اسمك وبيانات التواصل في تصميم سهل المشاركة.']
+};
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+const motionButton = document.querySelector('#motion-toggle');
+const motionGlyph = motionButton.querySelector('.motion-glyph');
+const motionLabel = motionButton.querySelector('.motion-label');
+let pausedByVisitor = false;
+try { pausedByVisitor = localStorage.getItem('wajha-motion-paused') === 'yes'; } catch {}
+function updateMotionControl() {
+  const paused = pausedByVisitor || motionPreference.matches;
+  document.documentElement.dataset.motion = paused ? 'paused' : 'playing';
+  motionButton.hidden = motionPreference.matches;
+  motionButton.setAttribute('aria-pressed', String(paused));
+  motionGlyph.textContent = paused ? '▶' : 'Ⅱ';
+  motionLabel.textContent = paused ? 'تشغيل الحركة' : 'إيقاف الحركة';
+  if (paused) {
+    for (const animation of document.querySelector('.sheet').getAnimations()) animation.cancel();
+  }
+}
+updateMotionControl();
+motionButton.addEventListener('click', () => {
+  pausedByVisitor = !pausedByVisitor;
+  updateMotionControl();
+  try { localStorage.setItem('wajha-motion-paused', pausedByVisitor ? 'yes' : 'no'); } catch {}
+});
+motionPreference.addEventListener('change', updateMotionControl);
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.classList.add('in-view');
+      observer.unobserve(entry.target);
+    }
+  }, { threshold: 0.2 });
+  for (const element of document.querySelectorAll('.explore, .steps article, .request form')) {
+    revealObserver.observe(element);
+  }
+}
+
+const buttons = document.querySelectorAll('[data-service]');
+const choice = document.querySelector('#service-choice');
+const priceList = document.querySelector('#sample-prices');
+const requestAmount = document.querySelector('#request-amount');
+const money = new Intl.NumberFormat('en-EG');
+for (const button of buttons) {
+  const first = Array.from(choice.options).find(option => option.dataset.key === button.dataset.service);
+  button.querySelector('.card-rate').textContent = 'من ' + priceLabel(first);
+}
+function priceLabel(option) {
+  return money.format(Number(option.dataset.price)) + ' جنيه';
+}
+const depositAmount = document.querySelector('#deposit-amount');
+const startingPriceField = document.querySelector('#starting-price-field');
+const depositField = document.querySelector('#deposit-field');
+function updateRequestPrice() {
+  const service = choice.selectedOptions[0];
+  const startingPrice = Number(service.dataset.price);
+  const deposit = startingPrice / 2;
+  requestAmount.textContent = priceLabel(service);
+  depositAmount.textContent = money.format(deposit) + ' جنيه';
+  startingPriceField.value = String(startingPrice);
+  depositField.value = String(deposit);
+}
+function renderPrices(key) {
+  const options = choice.querySelectorAll('[data-key="' + key + '"]');
+  priceList.replaceChildren(...Array.from(options, (option) => {
+    const row = document.createElement('li');
+    const name = document.createElement('bdi');
+    const amount = document.createElement('strong');
+    name.textContent = option.text;
+    amount.textContent = 'من ' + priceLabel(option);
+    row.append(name, amount);
+    return row;
+  }));
+}
+choice.addEventListener('change', updateRequestPrice);
+renderPrices(choice.selectedOptions[0].dataset.key);
+updateRequestPrice();
+
+const themeButton = document.querySelector('#theme-toggle');
+const themeCaption = themeButton.querySelector('.theme-caption');
+const themeMeta = document.querySelector('meta[name="theme-color"]');
+function setTheme(isLight) {
+  document.documentElement.dataset.theme = isLight ? 'light' : 'dark';
+  themeButton.setAttribute('aria-pressed', String(isLight));
+  themeCaption.textContent = isLight ? 'داكن' : 'فاتح';
+  themeMeta.content = isLight ? '#f3f0e9' : '#111016';
+}
+setTheme(document.documentElement.dataset.theme === 'light');
+themeButton.addEventListener('click', () => {
+  const isLight = document.documentElement.dataset.theme !== 'light';
+  setTheme(isLight);
+  try { localStorage.setItem('wajha-theme', isLight ? 'light' : 'dark'); } catch {}
+});
+for (const button of buttons) {
+  button.addEventListener('click', () => {
+    const key = button.dataset.service;
+    const [type, label, lines, description] = examples[key];
+    for (const option of buttons) {
+      option.setAttribute('aria-pressed', String(option === button));
+    }
+    document.querySelector('#sample-type').textContent = type;
+    document.querySelector('#sample-label').textContent = label;
+    const heading = document.querySelector('#sample-heading');
+    heading.textContent = lines[0];
+    if (lines[1]) heading.append(document.createElement('br'), lines[1]);
+    document.querySelector('.sheet').dataset.kind = key;
+    document.querySelector('#sample-description').textContent = description;
+    if (choice.selectedOptions[0].dataset.key !== key) {
+      choice.querySelector('[data-key="' + key + '"]').selected = true;
+    }
+    renderPrices(key);
+    updateRequestPrice();
+    if (!motionPreference.matches && !pausedByVisitor) {
+      const sample = document.querySelector('.sheet');
+      for (const animation of sample.getAnimations()) animation.cancel();
+      sample.animate(
+        [{ opacity: 0.4, transform: 'translateY(12px) scale(.985)' }, { opacity: 1, transform: 'translateY(0) scale(1)' }],
+        { duration: 440, easing: 'cubic-bezier(.18,.7,.3,1)' }
+      );
+    }
+  });
+}
+const form = document.querySelector('#brief');
+const submit = form.querySelector('button[type="submit"]');
+const receipt = document.querySelector('#receipt');
+const receiptStatus = document.querySelector('#receipt-status');
+const receiptTypes = new Set(['image/jpeg', 'image/png', 'image/webp']);
+receipt.addEventListener('change', () => {
+  const file = receipt.files[0];
+  let error = '';
+  if (file && (!receiptTypes.has(file.type) || !file.size)) {
+    error = 'اختار صورة JPG أو PNG أو WebP صالحة.';
+  } else if (file && file.size > 10_000_000) {
+    error = 'حجم الصورة أكبر من 10 ميجابايت. جرّب صورة أصغر.';
+  }
+  receipt.setCustomValidity(error);
+  receiptStatus.textContent = error || (file ? 'الصورة المختارة: ' + file.name : '');
+});
+const emailReady = form.hasAttribute('action') && location.protocol !== 'file:';
+if (emailReady) {
+  submit.disabled = false;
+  document.querySelector('#payment-pending').hidden = true;
+  document.querySelector('#brief-status').textContent = 'بيانات طلبك وصورة التحويل بتتبعت إلى واجهة عبر FormSubmit.';
+} else if (form.hasAttribute('action')) {
+  document.querySelector('#brief-status').textContent = 'افتح النسخة المستضافة عشان تبعت الطلب وصورة التحويل.';
+}
+const fields = [document.querySelector('#client-name'), document.querySelector('#goal')];
+for (const field of fields) {
+  field.addEventListener('input', () => field.setCustomValidity(''));
+}
+form.addEventListener('submit', (event) => {
+  if (!emailReady) {
+    event.preventDefault();
+    return;
+  }
+  for (const field of fields) {
+    field.value = field.value.trim();
+    if (!field.value) {
+      event.preventDefault();
+      field.setCustomValidity('كمّل الحقل ده عشان نقدر نراجع طلبك.');
+      field.reportValidity();
+      return;
+    }
+  }
+  submit.disabled = true;
+  submit.textContent = 'جاري الإرسال…';
+});
+window.addEventListener('pageshow', (event) => {
+  if (!event.persisted || !emailReady) return;
+  submit.disabled = false;
+  submit.textContent = 'إرسال الطلب';
+});
+</script>
+</body>
+</html>
